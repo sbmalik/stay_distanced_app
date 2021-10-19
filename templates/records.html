@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h2 class="text-center mt-3">Records</h2>
+    <div class="d-flex justify-content-center mt-3">
+        <a href="{% url 'download_report' %}" class="btn btn-primary ">Download Report</a>
+    </div>
+    <div class="dis-flex w-75 flex-col mx-auto mt-5">
+        <div class="dis-flex w-100 justify-content-between">
+            <div class="p-2 flex-4 font-weight-bold">Location</div>
+            <div class="p-2 flex-4 font-weight-bold">Total People</div>
+            <div class="p-2 flex-4 font-weight-bold"># of Violations</div>
+            <div class="p-2 flex-4 font-weight-bold">Recorded at</div>
+        </div>
+
+        <hr>
+    </div>
+    <div class="dis-flex w-75 flex-col mx-auto mb-3 record-holder">
+        {% for record in records %}
+            <div class="dis-flex w-100 h-100 justify-content-between">
+                <div class="p-2 flex-4">{{ record.location }}</div>
+                <div class="p-2 flex-4 ">{{ record.total_people }}</div>
+                <div class="p-2 flex-4 font-weight-bold text-danger">{{ record.total_violation }}</div>
+                <div class="p-2 flex-4">{{ record.recorded_at }}</div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock body %}

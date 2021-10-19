@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    {% load static %}
+    <div class="container news-box no-gutters">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <span class="glyphicon glyphicon-list-alt"></span>
+                        <h2><b>Technology News</b></h2></div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <ul class="news-demo-down-auto news-list">
+                                    <li class="news-item">Learn about new vaccine <a href="#">Read more...</a></li>
+                                    <li class="news-item">Pfizer Vaccine Data <br/>Compared to previous one <a href="#">Read
+                                        more...</a></li>
+                                    <li class="news-item">Covid-19 Vaccine Tracker Updates <a href="#">Read more...</a>
+                                    </li>
+                                    <li class="news-item">COVID: AstraZeneca vaccine remains unpopular in Germany <a
+                                            href="#">Read more...</a></li>
+                                    <li class="news-item">Learn about new vaccine <a href="#">Read more...</a></li>
+                                    <li class="news-item">Covid-19 Vaccine Tracker Updates <a href="#">Read more...</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-8">
+                <div class="container">
+                    {#                    <div class="embed-responsive embed-responsive-16by9">#}
+                    {% block home_vid %}
+                    {% endblock home_vid %}
+                    {#                    </div>#}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {#    <div class="container">#}
+    {#        <div class="row justify-content-center">#}
+    {#            <div class="col-6 stats-section">#}
+    {#                <h2>People Entered: <span class="label label-default">10</span></h2>#}
+    {#                <h2>Social Distancing Status : <span class="label label-default">Good</span></h2>#}
+    {#                <h2>Face Mask Detection : <span class="label label-default">30</span></h2>#}
+    {#            </div>#}
+    {##}
+    {#            <div class="col-2">#}
+    {#                <button type="button" class="btn btn-dark" style="margin-top:30px;">Start system</button>#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    </div>#}
+
+{% endblock body %}
+
+

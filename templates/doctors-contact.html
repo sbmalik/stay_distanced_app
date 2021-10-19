@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    {% load static %}
+
+
+    <div class="container Styleheading">
+        <h1>Doctors Contact List</h1>
+
+        <table class="table Margin tablePadding mt-5">
+            <thead class="Stylehead">
+            <tr>
+                <th scope="col">Sr. No</th>
+                <th scope="col" class="text-center">Doctor Name</th>
+                <th scope="col" class="text-center">Doctor Contact Number</th>
+                <th scope="col" class="text-center">Doctor Address</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for doctor in doctors %}
+                <tr>
+                    <th scope="col"> {{ doctor.id }}</th>
+                    <td>{{ doctor.doc_name }}</td>
+                    <td>{{ doctor.phone_number }}</td>
+                    <td>{{ doctor.address }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+{% endblock body %}

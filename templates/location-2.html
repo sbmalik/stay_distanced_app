@@ -1,0 +1,6 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block home_vid %}
+    <img src="{% url 'video_feed' 2 %}" alt="missing">
+    {#    <iframe class="embed-responsive-item" src="{% static 'video/1.mp4' %}"></iframe>#}
+{% endblock %}
